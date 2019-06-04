@@ -12,7 +12,7 @@ class Cita extends Component {
     const { appt } = this.props;
 
     const releaseDeleteAppt = () => {
-      deleteAppt(appt.id);
+      this.props.deleteAppt(this.props.info.id);
     };
 
     return (

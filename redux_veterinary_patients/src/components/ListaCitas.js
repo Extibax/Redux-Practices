@@ -41,7 +41,7 @@ class ListaCitas extends Component {
 }
 
 const mapStateToProps = state => ({
-  appts: state.appts
+  appts: state.appts.appts
 });
 
 export default connect(
