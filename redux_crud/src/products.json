@@ -6,14 +6,9 @@
       "price": "100"
     },
     {
-      "id": 2,
-      "name": "Pastel 3",
-      "price": 60
-    },
-    {
       "id": 3,
-      "name": "Pastel 4",
-      "price": 30
+      "name": "Pastel de Nuez",
+      "price": "75"
     },
     {
       "name": "Pastel de Zanahoria",
@@ -27,8 +22,18 @@
     },
     {
       "name": "Pastel de Fresa",
-      "price": "40",
+      "price": "60",
       "id": 6
+    },
+    {
+      "name": "Roles de Canela",
+      "price": "60",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "name": "Pastel de Vainilla con Chocolate",
+      "price": "125"
     }
   ]
 }
