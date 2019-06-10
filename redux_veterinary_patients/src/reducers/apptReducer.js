@@ -9,12 +9,6 @@ import {
 const initialState = {
   appts: [
     {
-      /* id: 0,
-      date: "10-20-30",
-      hour: "10:30",
-      pet: "Puppy",
-      owner: "Juan",
-      symptom: "Not want to eat" */
       id: 0,
       fecha: "2019-06-03",
       hora: "10:30",
@@ -59,7 +53,6 @@ export default function(state = initialState, action) {
       const newApptsArray = state.appts.filter(
         appt => appt.id !== action.payload
       );
-      /* console.log(...state, "Hello"); */
       console.log(newApptsArray);
       return {
         ...state,

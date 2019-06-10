@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 
 /* Actions */
 import { showProducts } from "../actions/productsActions";
+
+/* Components */
 import Product from "./Product";
 
 class Products extends Component {
