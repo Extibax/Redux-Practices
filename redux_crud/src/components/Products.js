@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 /* Actions */
-import { showProducts } from "../actions/productsActions";
+import { showProducts, setMessage } from "../actions/productsActions";
 
 /* Components */
 import Product from "./Product";
@@ -12,6 +12,8 @@ import Product from "./Product";
 class Products extends Component {
   componentDidMount() {
     this.props.showProducts();
+    this.props.setMessage("Hello World");
+    console.log("Component Mounted")
   }
 
   render() {
@@ -41,5 +43,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { showProducts }
+  { showProducts, setMessage }
 )(Products);

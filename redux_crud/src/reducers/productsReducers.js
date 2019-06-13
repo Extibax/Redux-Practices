@@ -3,12 +3,14 @@ import {
   SHOW_PRODUCT,
   ADD_PRODUCT,
   EDIT_PRODUCT,
-  DELETE_PRODUCT
+  DELETE_PRODUCT,
+  SET_MESSAGE
 } from "../actions/types";
 
 /* Cada reducer tiene su propio state */
 
 const initialState = {
+  message: "Hello",
   products: []
 };
 
@@ -44,6 +46,11 @@ export default function(state = initialState, action) {
             ? (product = action.payload)
             : product
         )
+      };
+    case SET_MESSAGE:
+      return {
+        ...state,
+        message: action.payload
       };
     default:
       return state;

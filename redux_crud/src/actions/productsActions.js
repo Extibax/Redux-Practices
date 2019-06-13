@@ -4,7 +4,8 @@ import {
   DELETE_PRODUCT,
   ADD_PRODUCT,
   SHOW_PRODUCT,
-  EDIT_PRODUCT
+  EDIT_PRODUCT,
+  SET_MESSAGE
 } from "./types";
 
 export const showProducts = () => async dispatch => {
@@ -52,5 +53,12 @@ export const editProduct = product => async dispatch => {
   dispatch({
     type: EDIT_PRODUCT,
     payload: response.data
+  });
+};
+
+export const setMessage = message => dispatch => {
+  dispatch({
+    type: SET_MESSAGE,
+    payload: message
   });
 };
