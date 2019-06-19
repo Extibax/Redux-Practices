@@ -18,6 +18,8 @@ class PostsNew extends Component {
     } = field;
     const className = `form-group ${touched && error ? "has-danger" : ""}`;
 
+    console.log(field.meta);
+
     return (
       <div className={className}>
         <label>{field.label}</label>
@@ -75,6 +77,8 @@ class PostsNew extends Component {
 function validate(values) {
   const errors = {};
 
+  console.log("My values", values);
+
   /* Validate the inputs from 'values' */
   if (!values.title || values.title.length < 3) {
     errors.title = "Enter a title that is at least 3 characters!";
@@ -98,12 +102,12 @@ const mapStateToProps = state => ({
   posts: state.posts
 });
 
-export default reduxForm({
+PostsNew = reduxForm({
   validate,
   form: "PostsNewForm"
-})(
-  connect(
-    mapStateToProps,
-    { createPost }
-  )(PostsNew)
-);
+})(PostsNew);
+
+export default connect(
+  mapStateToProps,
+  { createPost }
+)(PostsNew);
